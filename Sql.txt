@@ -1,0 +1,57 @@
+CREATE TABLE IF NOT EXISTS `tbluser` ( 
+  `Username` varchar(20) NOT NULL,
+  `Password` varchar(70) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  PRIMARY KEY (`Username`)
+)
+
+CREATE TABLE IF NOT EXISTS `tblusermessage` (
+  `Message_ID` int NOT NULL AUTO_INCREMENT,
+  `message` varchar(400) NOT NULL,
+  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `senderEmail` varchar(40) NOT NULL,
+  PRIMARY KEY (`Message_ID`)
+)
+
+CREATE TABLE IF NOT EXISTS `tblApplication` (
+  `ApllicationID` int NOT NULL AUTO_INCREMENT,
+  `cName` varchar(20) NOT NULL,
+  `cSurname` varchar(30) NOT NULL,
+  `cAge` int NOT NULL,
+  `cBdate` Date NOT NULL,
+  `cAddress` varchar(100) NOT NULL,
+    
+  `mName` varchar(20) NOT NULL,
+  `mSurname` varchar(30) NOT NULL,
+  `mID` int NOT NULL,
+  `mOccupation` varchar(60) NOT NULL,
+  `mCell` varchar(10) NOT NULL, 
+  `mWork` varchar(10) NOT NULL, 
+  `mEmail` varchar(30) NOT NULL,
+    
+  `dName` varchar(20) NOT NULL,
+  `dSurname` varchar(30) NOT NULL,
+  `dID` int NOT NULL,
+  `dOccupation` varchar(60) NOT NULL,
+  `dCell` varchar(10) NOT NULL, 
+  `dWork` varchar(10) NOT NULL, 
+  `dEmail` varchar(30) NOT NULL,
+    
+  `docName` varchar(50) NOT NULL,
+  `docNum` varchar(10) NOT NULL,
+    
+  `emName1` varchar(20) NOT NULL,
+  `emSurname1` varchar(30) NOT NULL,
+  `emCell1` varchar(10) NOT NULL, 
+  `emAddress1` varchar(100) NOT NULL, 
+    
+  `emName2` varchar(20) NOT NULL,
+  `emSurname2` varchar(30) NOT NULL,
+  `emCell2` varchar(10) NOT NULL, 
+  `emAddress2` varchar(100) NOT NULL, 
+    
+  `cAllergies` varchar(250) NOT NULL, 
+  `cOperations` varchar(250) NOT NULL, 
+    
+  PRIMARY KEY (`ApllicationID`)
+)
